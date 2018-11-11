@@ -1,0 +1,30 @@
+.image-wrapper {
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 8px;
+    background: #eaeaea;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    color: #333;
+}
+p {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    color: #666;
+}
+a {
+    text-decoration: none;
+}

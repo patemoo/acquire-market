@@ -1,17 +1,18 @@
 <header>
   <h1>
-    <a routerLink="/">Acquire.</a>
+    <a routerLink="/">Acquire<span class="colon">:</span></a>
   </h1>
 </header>
 
 <nav>
   <ul>
+    <li><a href="#" routerLink="/" >sign in</a></li>
     <li><a href="#" routerLink="/cart" >cart</a></li>
   </ul>
 </nav>
 
 <main>
-<router-outlet></router-outlet>
+<router-outlet (activate)="onActivate($event)"></router-outlet>
 </main>
 
 <footer>
