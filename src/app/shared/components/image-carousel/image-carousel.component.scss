@@ -1,0 +1,26 @@
+:host {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    height: 60vw;
+    max-height: 520px;
+    margin: auto;
+    background-color: #eaeaea;
+    overflow: hidden; 
+}
+
+::ng-deep [carouselImage] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 100%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 2000ms linear;
+    &.in-view {
+        opacity: 1;
+    }
+}

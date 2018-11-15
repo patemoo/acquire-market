@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Product } from '../products/products';
+import { Product, ProductImage } from '../../products/products';
 
 @Component({
   selector: 'product-card',
@@ -12,9 +12,12 @@ export class ProductCardComponent implements OnInit {
   @Input()
   public product: Product;
 
+  public image: ProductImage;
+
   constructor() { }
 
   ngOnInit() {
+    this.image = this.product && this.product.images && this.product.images[0];
   }
 
 }

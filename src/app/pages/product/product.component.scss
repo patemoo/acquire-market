@@ -1,3 +1,5 @@
+@import '../../shared/colors/colors';
+
 article {
 
     h2 {
@@ -7,8 +9,8 @@ article {
     }
 
     .product-wrapper {
-        margin-bottom: 40px;
-        @media screen and (min-width: 968px) {
+        margin-bottom: 80px;
+        @media screen and (min-width: 768px) {
             display: flex;
             flex-direction: row;
         }
@@ -21,6 +23,9 @@ article {
             min-height: 300px;
             background-color: #eaeaea;
             margin-bottom: 8px;
+            @media screen and (min-width: 768px) {
+                min-height: 400px;
+            }
         }
         .gallery {
             height: 40px;
@@ -33,15 +38,49 @@ article {
         padding: 40px 0;
         min-height: 300px;
 
-        @media screen and (min-width: 968px) {
+        @media screen and (min-width: 768px) {
             padding: 40px 0 40px 40px;
+        }
+
+        .title {
+            margin-bottom: 4px;
+        }
+        .price {
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: .1rem;
+            margin-bottom: 40px;
+        }
+        .description {
+            font-size: 13px;
+            font-weight: 400;
+
+        }
+        .add-cart {
+            height: 32px;
+            min-width: 140px;
+            margin-top: 120px;
+            padding: 8px 16px;
+            background-color: $secondary-color;
+            border: 1px solid $secondary-color;
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 180ms linear, border-color 180ms linear;
+            &:hover {
+                background-color: $primary-color;
+                border: 1px solid $primary-color;
+            }
         }
     }
 
 
     .similar {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         grid-gap: 16px 16px;
     }
 }

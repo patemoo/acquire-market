@@ -1,17 +1,6 @@
-.carousel-placeholder {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 1200px;
-    height: 40vw;
-    min-height: 320px;
-    max-height: 420px;
-    margin: auto;
-    background-color: #eaeaea;
-    overflow: hidden;
-}
-
 article {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 16px 16px;
+    grid-gap: 24px 16px;
+    padding: 40px 20px;
 }
