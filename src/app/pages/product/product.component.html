@@ -12,6 +12,23 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, error ratione eligendi nisi corporis iure aliquam, reprehenderit maxime nemo veritatis, unde eum similique nobis explicabo quos sequi perspiciatis rem! Soluta.
       </p>
 
+      <div class="details">
+        <button (click)="toggleDetails($event)"><h2>Details 
+          {{ showDetails ? '-' : '+' }}
+        </h2></button>
+        <div class="details-content" [class.show]="showDetails">
+          <ng-container *ngIf="product.details; else noDetails">
+            <ul>
+              <li *ngFor="let detail of product.details">{{detail}}</li>
+            </ul>
+          </ng-container>
+          <ng-template #noDetails>
+            <p>Details unavailable.</p>
+          </ng-template>
+          
+        </div>
+      </div>
+
       <button class="add-cart">Add to cart</button>
     </div>
   </section>
@@ -19,7 +36,7 @@
   <section>
       <h2>Similar Items</h2>
       <section  class="similar">
-        <product-card *ngFor="let id of product.similar" [product]="productList[id]"></product-card>
+        <product-card *ngFor="let id of product.similar" [product]="products[id]"></product-card>
       </section>
   </section>
 </article>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
 
-import { Product, productList} from '../../shared/products/products';
+import { Product } from '../../shared/interfaces/product';
+import { ProductService } from '../../shared/services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +11,16 @@ import { Product, productList} from '../../shared/products/products';
 })
 export class HomeComponent implements OnInit {
 
-  public products: Product[] = productList;
+  public products: Product[];
 
-  constructor() { }
+  constructor(
+    private productService: ProductService,
+  ) { }
 
   ngOnInit() {
+    this.productService.products.pipe(take(1)).subscribe(products => {
+      this.products = products;
+    });
   }
 
 }

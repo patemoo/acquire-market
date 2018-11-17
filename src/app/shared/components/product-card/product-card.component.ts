@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Product, ProductImage } from '../../products/products';
+import { Product, ProductImage } from '../../interfaces/product';
 
 @Component({
   selector: 'product-card',
