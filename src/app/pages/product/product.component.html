@@ -9,7 +9,7 @@
       <h1 class="title">{{product.name}}</h1>
       <p class="price">{{product.price}}</p>
       <p class="description">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, error ratione eligendi nisi corporis iure aliquam, reprehenderit maxime nemo veritatis, unde eum similique nobis explicabo quos sequi perspiciatis rem! Soluta.
+        {{product.description}}
       </p>
 
       <div class="details">
@@ -29,7 +29,11 @@
         </div>
       </div>
 
-      <button class="add-cart">Add to cart</button>
+      <button 
+        class="add-cart"
+        (click)="addToCart()">
+          Add to cart
+      </button>
     </div>
   </section>
 

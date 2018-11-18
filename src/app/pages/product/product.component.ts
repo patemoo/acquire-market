@@ -4,7 +4,8 @@ import { Subscription } from 'rxjs/internal/Subscription';
 import { take } from 'rxjs/operators'
 
 import { Product } from '../../shared/interfaces/product';
-import { ProductService } from '../../shared/services/product.service'
+import { ProductService } from '../../shared/services/product/product.service'
+import { CartService } from '../../shared/services/cart/cart.service'
 
 
 @Component({
@@ -26,6 +27,7 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   constructor(
     private activatedRoute: ActivatedRoute,
+    private cartService: CartService,
     private productService: ProductService,
   ) { }
 
@@ -45,14 +47,19 @@ export class ProductComponent implements OnInit, OnDestroy {
           document.body.scrollTop = 0;
         });
       });
-  }
+
+  };
 
   public toggleDetails(): void {
     this.showDetails = !this.showDetails;
   }
 
+  public addToCart(): void {
+    this.cartService.addToCart(this.product);
+  };
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
-  }
+  };
 
 }

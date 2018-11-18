@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs/operators';
 
 import { Product } from '../../shared/interfaces/product';
-import { ProductService } from '../../shared/services/product.service';
+import { ProductService } from '../../shared/services/product/product.service';
 
 @Component({
   selector: 'app-home',

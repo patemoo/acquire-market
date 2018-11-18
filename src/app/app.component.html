@@ -7,7 +7,9 @@
 <nav>
   <ul>
     <li><a href="#" routerLink="/" >sign in</a></li>
-    <li><a href="#" routerLink="/cart" >cart</a></li>
+    <li><a href="#" routerLink="/cart" >cart 
+      <ng-container *ngIf="cartCount">({{cartCount}})</ng-container>
+    </a></li>
   </ul>
 </nav>
 
@@ -19,21 +21,21 @@
   <section>
     <div class="footer-links">
       <ul>
-        <li><a href="">Some link text</a></li>
-        <li><a href="">Some link text</a></li>
-        <li><a href="">Some link text</a></li>
+        <li><a href="/assets/common-dimensions.jpg" target="_blank">Common dimensions chart</a></li>
       </ul>
       <ul>
-          <li><a href="">Some link text</a></li>
-          <li><a href="">Some link text</a></li>
-          <li><a href="">Some link text</a></li>
-        </ul>
+        <li><a href="https://www.linkedin.com/in/patrickemoore/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/patemoo" target="_blank">Github</a></li>
+        <li><a href="https://twitter.com/PatMooreDesign" target="_blank">Twitter</a></li>
+      </ul>
     </div>
     <div class="footer-form">
-      <form>
+      <form 
+        action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php"
+        method="POST">
         <input type="email" name="email" placeholder="Email"/>
         <textarea name="message" placeholder="Drop us a line..."></textarea>
-        <button name="submit">Send</button>
+        <button id="submit">Send</button>
       </form>
     </div>
   </section>

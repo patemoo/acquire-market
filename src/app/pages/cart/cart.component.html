@@ -1,4 +1,30 @@
 <article>
-  <h1>Cart</h1>
+    <section class="cart-wrapper">
+      <div class="cart">
+          <h1 class="title">Cart</h1>
 
-</article>
+          <ng-container *ngIf="cartItems.length; else Empty">
+              <product-card *ngFor="let item of cartItems" [product]="item" [cartView]="true"></product-card>
+          </ng-container>
+
+          <ng-template #Empty>
+            <p>Your cart is empty.</p>
+          </ng-template>
+        
+      </div>
+      
+      <div *ngIf="cartItems.length" class="checkout-wrapper">
+        <div class="totals">
+          <p><span>Order subtotal:</span> <span>$000.000</span></p>
+          <p><span>Est. Shipping + Handling:</span> <span>$000.000</span></p>
+          <p><span>Subtotal:</span> <span>$000.000</span></p>
+        </div>
+        <button class="checkout-button">
+            Checkout
+        </button>
+
+      </div>
+    </section>
+
+  </article>
+  

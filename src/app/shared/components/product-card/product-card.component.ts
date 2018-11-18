@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, HostBinding, OnInit, Input } from '@angular/core';
 
 import { Product, ProductImage } from '../../interfaces/product';
 
@@ -8,6 +8,9 @@ import { Product, ProductImage } from '../../interfaces/product';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
+
+  @Input() @HostBinding('class.cart-view')
+  public cartView: boolean = false;
 
   @Input()
   public product: Product;
