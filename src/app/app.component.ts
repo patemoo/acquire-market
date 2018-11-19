@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/internal/Subscription';
 
 import { CartService } from './shared/services/cart/cart.service';
@@ -8,7 +8,7 @@ import { CartService } from './shared/services/cart/cart.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements  OnInit {
+export class AppComponent implements  OnInit, OnDestroy {
 
   public cartCount: number;
 
@@ -27,5 +27,9 @@ export class AppComponent implements  OnInit {
 
   public onActivate(event): void {
     document.body.scrollTop = 0;
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }
