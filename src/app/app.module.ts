@@ -11,6 +11,7 @@ import { ImageCarouselModule } from './pages/home/image-carousel/image-carousel.
 import { ProductComponent } from './pages/product/product.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { ImageViewerComponent } from './pages/product/image-viewer/image-viewer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
     HomeComponent,
     ProductCardComponent,
     ProductComponent,
+    ImageViewerComponent,
   ],
   imports: [
     AppRoutingModule,

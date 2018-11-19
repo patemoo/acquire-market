@@ -28,8 +28,8 @@ const PRODUCTS: Product[] = [
               alt: '',
           },
           {
-              large: 'Remington_Sofa_-_Black_2048x.png',
-              thumb: 'Remington_Sofa_-_Black_2048x.png',
+              large: 'assets/images/remington-sofa/Remington_Sofa_-_Black_2048x.png',
+              thumb: 'assets/images/remington-sofa/Remington_Sofa_-_Black_2048x.png',
           },
           {
               large: '',

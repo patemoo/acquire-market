@@ -3,6 +3,7 @@
     <img src="{{image?.thumb}}" alt="{{image?.alt}}}">
   </div>
   <div class="info">
+    <button *ngIf="cartView" class="remove" (click)="removeFromCart($event)">Remove</button>
     <h3 class="title">{{product.name}}</h3>
     <p class="price">{{product.price}}</p>
   </div>

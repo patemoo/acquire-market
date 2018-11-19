@@ -1,15 +1,15 @@
 <article>
     <section class="cart-wrapper">
       <div class="cart">
-          <h1 class="title">Cart</h1>
+        <h1 class="title">Cart</h1>
 
-          <ng-container *ngIf="cartItems.length; else Empty">
-              <product-card *ngFor="let item of cartItems" [product]="item" [cartView]="true"></product-card>
-          </ng-container>
+        <ng-container *ngIf="cartItems.length; else Empty">
+            <product-card *ngFor="let item of cartItems" [product]="item" [cartView]="true"></product-card>
+        </ng-container>
 
-          <ng-template #Empty>
-            <p>Your cart is empty.</p>
-          </ng-template>
+        <ng-template #Empty>
+          <p class="empty">Your cart is empty.</p>
+        </ng-template>
         
       </div>
       
@@ -22,7 +22,6 @@
         <button class="checkout-button">
             Checkout
         </button>
-
       </div>
     </section>
 

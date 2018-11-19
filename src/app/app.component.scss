@@ -11,7 +11,6 @@ header {
     padding: 20px 20px 0;
     h1 { 
         font-size: 32px;
-        font-weight: 700;
         line-height: 1;
         letter-spacing: .1rem;
         border-bottom: 1px solid #eaeaea;
@@ -19,7 +18,7 @@ header {
             display: inline-block;
             text-decoration: none;
             color: $primary-color;
-            
+            font-weight: 700;
         }
         .colon {
             color: #ccc;
@@ -45,6 +44,10 @@ nav {
                 line-height: 40px;
                 font-weight: 300;
                 color: #333;
+
+                &:hover {
+                    color: $primary-color;
+                }
                 
             }
         }
@@ -62,6 +65,7 @@ footer {
     background-color: $secondary-color;
     padding: 40px 20px;
     font-size: 14px;
+    font-weight: 300;
     section {
         flex: 1 1;
         display: flex;

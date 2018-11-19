@@ -16,21 +16,8 @@ article {
         }
     }
 
-    .images {
+    image-viewer {
         flex: 2 1;
-
-        .selected-image {
-            min-height: 300px;
-            background-color: #eaeaea;
-            margin-bottom: 8px;
-            @media screen and (min-width: 768px) {
-                min-height: 400px;
-            }
-        }
-        .gallery {
-            height: 40px;
-            background-color: #eaeaea;
-        }
     }
 
     .info {

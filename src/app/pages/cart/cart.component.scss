@@ -20,6 +20,10 @@ article {
         @media screen and (min-width: 992px) {
             flex: 2 1;
         }
+
+        .empty {
+            color: #ccc;
+        }
         
         .cart-item {
             padding: 20px 0;

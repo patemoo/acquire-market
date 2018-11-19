@@ -1,0 +1,27 @@
+
+.selected-image {
+    // min-height: 300px;
+    background-color: #eaeaea;
+    margin-bottom: 8px;
+    font-size: 0;
+    line-height: 0;
+
+    @media screen and (min-width: 768px) {
+        // min-height: 400px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+.gallery {
+    height: 40px;
+
+    img {
+        display: inline-block;
+        max-height: 100%;
+        margin-right: 8px;
+        border: 1px solid #eaeaea;
+        cursor: pointer;
+    }
+}

@@ -1,9 +1,6 @@
 <article>
   <section class="product-wrapper">
-    <div class="images">
-      <div class="selected-image"></div>
-      <div class="gallery"></div>
-    </div>
+    <image-viewer [images]="product.images"></image-viewer>
 
     <div class="info">
       <h1 class="title">{{product.name}}</h1>

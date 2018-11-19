@@ -1,0 +1,9 @@
+<div class="selected-image">
+  <img *ngIf="selectedImage" src="{{selectedImage.large}}" alt="{{selectedImage.alt}}">
+</div>
+<div *ngIf="images" class="gallery">
+  <img *ngFor="let image of images" 
+    src="{{image.thumb}}" 
+    alt="{{image.alt}}"
+    (click)="selectImage(image)">
+</div>

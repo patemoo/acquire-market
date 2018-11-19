@@ -1,6 +1,7 @@
 import { Component, HostBinding, OnInit, Input } from '@angular/core';
 
 import { Product, ProductImage } from '../../interfaces/product';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'product-card',
@@ -17,10 +18,18 @@ export class ProductCardComponent implements OnInit {
 
   public image: ProductImage;
 
-  constructor() { }
+  constructor(
+    private cartService: CartService,
+  ) { }
 
   ngOnInit() {
     this.image = this.product && this.product.images && this.product.images[0];
+  }
+
+  public removeFromCart(event: Event): void {
+    event.preventDefault();
+    event.stopPropagation();
+    this.cartService.removeFromCart(this.product);
   }
 
 }
